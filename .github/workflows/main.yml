@@ -1,0 +1,28 @@
+name: CI - Docker Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build NestJS Docker Image
+        run: |
+          docker build -t nest-app ./devops-sample-nest
+
+      - name: Build FastAPI Docker Image
+        run: |
+          docker build -t fastapi-app ./devops-sample-fast
