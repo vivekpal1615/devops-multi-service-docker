@@ -1,0 +1,12 @@
+services:
+  nest-app:
+    build: ./devops-sample-nest
+    ports:
+      - "3000:3000"
+    container_name: nest-container
+
+  fastapi-app:
+    build: ./devops-sample-fast
+    ports:
+      - "8000:8000"
+    container_name: fastapi-container
