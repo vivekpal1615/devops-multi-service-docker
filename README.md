@@ -1,4 +1,4 @@
-![CI](https://github.com/vivekpal1615/devops-multi-service-docker/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/vivekpal1615/devops-multi-service-docker/actions/workflows/main.yml/badge.svg)
 
 # DevOps Multi-Service Docker Project
 
